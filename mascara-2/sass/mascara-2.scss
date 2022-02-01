@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*
+    con estas variables controlamos dinamicamente el WIDTH y HEIGHT 
+    de todas las box dentro de la mascara por lo que si deseamos 
+    cambiar sus dimensiones bastaria con modifiar estas propiedades
+*/
+$widthMask: 100%;
+$heightMask: 500px;
+
+header,
+footer {
+	text-align: center;
+	color: #fff;
+	background-color: rgb(84, 193, 197);
+	height: 60px;
+	font-size: 1.6rem;
+}
+
+/*
+    seccion_name: nos sirve para implementar margenes y espaciados 
+    con el fin de separar el contenedor del body
+*/
+.section_mask {
+	/*
+        container_name: es quien contiene todos los elementos por lo
+		general es a esta que damos width para manejar el responsive
+    */
+	.container_mask {
+		/*
+			box_name contenedor de mask_content le definimos ABSOLUTE para 
+			posicionar esta caja sobre la box_img tambien definimos flexbox
+			con el cual centramos la box_mask vertical y horizontalmente
+		*/
+		.box_mask {
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0.467);
+			position: absolute;
+			width: $widthMask;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			height: $heightMask;
+			align-items: center;
+
+			/*
+				mask_content: contenedor del contenido texto a la cual le 
+				definimos MAX-WIDTH que nos permite tener un control del 
+				ancho total de esta caja tambien tiene un padding calculado 
+				relacionado con ese ancho para separar el contenido de los bordes
+			*/
+			.mask_content {
+				max-width: 800px;
+				padding: 0 calc(100% - 93%);
+
+				h2 {
+					font-size: 3.5rem;
+					font-weight: 600;
+					line-height: 0.9; // definido para cerrar el espaciado entre palabras del titulo
+				}
+
+				p {
+					font-size: 1.5rem;
+					font-weight: 500;
+					line-height: 1.4; // definido para abrir el espaciado entre palabras del parrafo
+					margin: 12px 0 26px;
+				}
+
+				button {
+					border: none;
+					border-radius: 2px;
+					outline: none;
+					background-color: lightseagreen;
+					color: #fff;
+					font-size: 1.2rem;
+					width: 160px;
+					height: 50px;
+				}
+			}
+		}
+
+		/*
+			box_img contenedor de la imagen le definimos las variable WIDTH y HEIGHT 
+			para controlar dinamicamente el tamaño de esta caja y a la TAG IMG
+			le definimos estas propeidades por herencia para que ocupe todo 
+			el espacio en la caja
+		*/
+		.box_img {
+			width: $widthMask;
+			height: $heightMask;
+
+			img {
+				width: inherit;
+				height: inherit;
+				object-fit: cover;
+			}
+		}
+	}
+}

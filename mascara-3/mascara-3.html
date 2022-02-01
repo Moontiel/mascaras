@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mascara-3</title>
+		<link rel="stylesheet" href="./sass/mascara-3.css" />
+	</head>
+	<body>
+		<header>Header</header>
+
+		<!-- 
+			seccion_name: nos sirve para implementar margenes y espaciados 
+			con el fin de separar el contenedor del body 
+		-->
+		<div class="section_mask">
+			<!-- 
+				container_name: es quien contiene todos los elementos por lo
+				general es a esta que damos width para manejar el responsive
+			-->
+			<div class="container_mask">
+				<!-- 
+					box_mask: contiene a box_content 
+				-->
+				<div class="box_mask">
+					<!-- 
+						mask_content: contiene el contenido de la mascara 
+					-->
+					<section class="mask_content">
+						<h2>Aqui iria un titulo</h2>
+
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro
+							quibusdam, animi facere vero corrupti harum magni tenetur beatae
+							aspernatur eligendi.
+						</p>
+
+						<div class="box_btn">
+							<button>Read more</button>
+						</div>
+					</section>
+				</div>
+
+				<!-- 
+					box_img: contiene la imagen de la mascara 
+				-->
+				<div class="box_img">
+					<img src="./img/img1.jpg" alt="imagen" />
+				</div>
+			</div>
+		</div>
+
+		<footer>Footer</footer>
+	</body>
+</html>
