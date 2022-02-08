@@ -1,0 +1,186 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*
+    variables implemenatdas en elementos que comparten estas
+	propiedades
+*/
+$heightSectionDestok: 500px;
+$heightSectionMovil: 400px;
+
+header,
+footer {
+	text-align: center;
+	background-color: #2aa83f;
+	color: #fff;
+	height: 25px;
+}
+
+/*
+    section_name: contenedor definido para implementar
+    margin o padding con el fin de separar las secciones
+    entre si
+*/
+.section_name {
+	padding: 50px 0;
+
+	/*
+		container_name: contenedor definido para manejar
+		el responsive haciendo uso de width, es importante 
+		implementar un height ya que nos ayuda a centrar 
+		los elementos y que las imagenes ocupen todo el viewport
+    */
+	.container_name {
+		margin: 0 auto;
+	
+		/*
+			@query 499px <== : modificamos las propiedades
+			width y height para esta medida responsive
+		*/
+		@media (max-width: 499px) {
+			width: 95%;
+			height: $heightSectionMovil;
+		}
+		
+		/*
+			@query 500px ==> : modificamos las propiedades
+			width y height para esta medida responsive
+		*/
+		@media (min-width: 500px) {
+			width: 82%;
+			height: $heightSectionDestok;
+		}
+
+		/* 
+            flexbox_banner: importante definir un relative para solucionar 
+			el problema que causa position: absolute finalmente definimos 
+			flexbox y sus propiedades align-items y justify-content para 
+			centrar la caja horizontal y verticalmente a su padre que es
+			quien tiene definido el height
+        */
+		.content_flexbox {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;			
+				
+			/*
+				content_mask: definimos position: absolute y un z-index 
+				para sacar esta caja de posicion haciendo que la caja swiper 
+				se posicione por debajo
+			*/
+			.content_mask {
+				position: absolute;
+				z-index: 2;
+				width: 90%;
+				// background-color: rgba(255, 0, 0, 0.274);
+
+				h1 {
+					background-color: rgba(49, 51, 56, 0.9);
+					color: #fff;
+					border-bottom: 1px solid #fff;
+					padding: 15px 25px;
+				}
+
+				p {
+					background-color: rgba(49, 51, 56, 0.9);
+					color: #fff;
+					padding: 15px 25px;
+				}
+
+				/*
+					box_icon_swiper: implementando flexbox en este contenedor
+					podemos modificar la posicion de los iconos del slider
+				*/
+				.box_icon_swiper {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					margin-top: 12px;
+
+					/*
+						@query 499px <== : cambiamos el valor de justify-content
+						para esta medida responsive
+					*/
+					@media (max-width: 499px) {
+						justify-content: space-between;
+					}
+
+					/*
+						swiper-button-next, swiper-button-prev: para 
+						cambiar estas propiedades debemos definirlas en estas clases
+					*/
+					.swiper-button-next,
+					.swiper-button-prev {
+						position: relative;
+						top: 0;
+						left: 0;
+						right: 0;
+						width: 0;
+						height: 0;
+						background-color: #313338;
+						margin-top: 0;
+						padding: 25px;
+					}
+
+					.swiper-button-prev {
+						margin-right: 20px;
+					}
+
+					/*
+						swiper-button-next:after, swiper-button-prev:after: para 
+						cambiar estas propiedades debemos definirlas en estas clases
+					*/
+					.swiper-button-next:after,
+					.swiper-button-prev:after {
+						color: #fff;
+						font-size: 26px;
+						font-weight: 700;
+					}
+				}
+			}
+
+			/*
+				swiper: contenedor del slider a este es importante definirle la
+				misma altura que la seccion para que no genere desmaquetados
+			*/
+			.swiper {
+				// background-color: red;
+
+				/*
+					@query 499px <== : modificamos el height
+					para esta medida responsive
+				*/
+				@media (max-width: 499px) {
+					height: $heightSectionMovil;
+				}
+
+				/*
+					@query 500px ==> : modificamos el height
+					para esta medida responsive
+				*/
+				@media (min-width: 500px) {
+					height: $heightSectionDestok;
+				}
+
+				.swiper-wrapper {
+					.swiper-slide {
+						/*
+							tag-img: es importante a esta imagen definirle un width
+							y height igual al de su contenedor padre y la propiedad 
+							object-fit: cover para que se ajuste al contenedor
+						*/
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+				}
+			}
+		}
+	}
+}

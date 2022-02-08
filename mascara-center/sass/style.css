@@ -1,0 +1,117 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+    variables implemenatdas en elementos que comparten estas
+	propiedades
+*/
+header,
+footer {
+  text-align: center;
+  color: #fff;
+  background-color: crimson;
+  height: 78px;
+}
+
+/*
+    section_name: contenedor definido para implementar
+    margin o padding con el fin de separar las secciones
+    entre si
+*/
+.section_name {
+  /*
+  	container_name: contenedor definido para manejar
+  	el responsive implementando width
+     */
+}
+.section_name .container_name {
+  /*
+            content_flexbox: contenedor definido para
+            implementar flebox si se requiere
+        */
+}
+.section_name .container_name .content_flexbox {
+  /*
+  	box_mask: caja contenedora que definimos cuando no
+  	queremos que las propiedades flexbox afecten a cada caja
+  */
+}
+.section_name .container_name .content_flexbox .box_mask {
+  /*
+  	content_mask: definimos position: absolute para sacar esta caja
+  	de posicion haciendo que content_img se posicione por debajo de esta
+  	finalmente definimos flexbox con sus propiedades mas la definicion
+  	de un width y height que nos permiten centrar la mascara vertical 
+  	y horizontalmente dentro de su contenedor
+  */
+  /*
+  	content_img: definimos width y height para controlar dinamicamente 
+  	el tamaño de esta caja y que siempre sea igual a al tamaño de 
+  	content_mask
+  */
+}
+.section_name .container_name .content_flexbox .box_mask .content_mask {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.623);
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  align-items: center;
+  /*
+  	mask_info: definir un max-width en este contenedor nos 
+  	permite reducir su ancho, por ende podemos controlar
+  	su ubicacion con flexbox. Tiene un padding que nos permite
+  	separar el contenido de los bordes y finalmente un 
+  	text-align: center para centrar los elementos
+  */
+}
+.section_name .container_name .content_flexbox .box_mask .content_mask .mask_info {
+  max-width: 800px;
+  padding: 0 calc(100% - 93%);
+  text-align: center;
+  /*
+  	content_btn: contiene una tag-a
+  */
+}
+.section_name .container_name .content_flexbox .box_mask .content_mask .mask_info h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 0.9;
+}
+.section_name .container_name .content_flexbox .box_mask .content_mask .mask_info p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 12px 0 26px;
+}
+.section_name .container_name .content_flexbox .box_mask .content_mask .mask_info .content_btn {
+  /*
+  	tag-a: definimos display: inline-flex
+  */
+}
+.section_name .container_name .content_flexbox .box_mask .content_mask .mask_info .content_btn a {
+  text-decoration: none;
+  display: inline-flex;
+  width: 160px;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  background-color: crimson;
+  color: #fff;
+}
+.section_name .container_name .content_flexbox .box_mask .content_img {
+  width: 100%;
+  height: 500px;
+}
+.section_name .container_name .content_flexbox .box_mask .content_img img {
+  width: inherit;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */

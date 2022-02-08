@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mascara slider</title>
+		<link rel="stylesheet" href="./sass/style.css" />
+		<!-- 
+			importante implementar los estilos css de la libreria swiper
+		-->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+	</head>
+	<body>
+		<header>header</header>
+
+		<!--  
+    		section_name: contenedor de la seccion
+		-->	
+		<div class="section_name">
+			<!--  
+        		container_name: contenedor encargado
+        		del responsive
+    		-->
+			<div class="container_name">
+				<!--  
+            		content_flexbox: contenedor definido
+            		para implementar flebox
+        		-->
+				<div class="content_flexbox">
+					<!-- 
+						content_mask: contiene a una tag-h1, una
+						tag-p y a box_icon_swiper
+					-->
+					<section class="content_mask">
+						<!--  
+							titulo de la mascara
+						-->
+						<h1>Titulo de la mascara</h1>
+
+						<!-- parrafo de la mascara -->
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							Illo quidem amet possimus placeat eligendi ut quis similique 
+							cupiditate ipsa tempore ullam consequuntur laudantium ab excepturi 
+							deleniti reprehenderit, saepe quas esse?
+						</p>
+
+						<!--  
+							box_icon_swiper: esta caja contiene los botones
+							next y prev del slider
+						-->
+						<div class="box_icon_swiper">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</section>
+
+					<!-- 
+						swiper: caja contenedora de swiper-wrapper
+					-->
+					<div class="swiper mySwiper">
+						<!-- 
+							swiper: caja contenedora del slider
+						-->
+						<div class="swiper-wrapper">
+							<!-- 
+								swiper-slide: caja contenedora de las imagenes del slider
+							-->
+							<div class="swiper-slide">
+								<img src="./assets/img/04.jpg" alt="img" />
+							</div>
+
+							<div class="swiper-slide">
+								<img src="./assets/img/06.jpg" alt="img" />
+							</div>
+
+							<div class="swiper-slide">
+								<img src="./assets/img/04.jpg" alt="img" />
+							</div>
+
+							<div class="swiper-slide">
+								<img src="./assets/img/06.jpg" alt="img" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>footer</footer>
+
+		<!-- 
+			importante implementar el javascript de la libreria swiper
+		-->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
