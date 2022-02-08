@@ -2,7 +2,7 @@
 
 Estan hechas con html, css y js haciendo uso de la libreria swiperjs
 
-![mascara-background](https://user-images.githubusercontent.com/98065715/153080173-b06922df-0253-463b-b5c9-346d5fe01e93.png)
+![mascara-background](https://user-images.githubusercontent.com/98065715/153080863-79467dc2-f6c6-4b5c-b6e8-dfcb9fade937.png)
 
 ![mascara-center](https://user-images.githubusercontent.com/98065715/153080177-8ebe45bc-00aa-4cbc-9ab3-6cd09b5b7b42.png)
 
